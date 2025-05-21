@@ -56,9 +56,6 @@ PyTorch ve CUDA kurulumu:
 conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
 ```
 
-# CPU kullanımı için
-# conda install pytorch torchvision torchaudio cpuonly -c pytorch
-
 Gerekli paketleri yükleyin:
 
 ```bash
