@@ -32,14 +32,14 @@ Projede üç farklı model uygulanmıştır:
 - Python 3.8+
 - PyTorch 1.10+
 - CUDA 11.1+ (GPU kullanımı için)
-- Anomalib 0.4.0+
+- Anomalib 2.0.0
 
 ### Kurulum Adımları
 
 1. Repository'yi klonlayın:
 ```bash
-git clone https://github.com/yourusername/ahsap-anomali-tespiti.git
-cd ahsap-anomali-tespiti
+git clone https://github.com/mmustafaozgur/NeuralNetworksAnomalyDetection.git
+cd NeuralNetworksAnomalyDetection
 ```
 
 2. Gerekli paketleri yükleyin:
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 3. Anomalib kütüphanesini yükleyin:
 ```bash
-pip install anomalib
+pip install anomalib[full]
 ```
 
 ## Veri Seti
@@ -126,27 +126,6 @@ Projede kullanılan modellerin performans metrikleri:
 | FastFlow | 0.7425    | 0.7119          | 0.9023      | 0.2690         |
 | PADIM | 0.8258       | 0.7973          | 0.9318      | 0.2931         |
 
-## Hata Giderme ve Sık Karşılaşılan Sorunlar
-
-### CUDA Bellek Hatası
-
-Eğer "CUDA out of memory" hatası alırsanız, batch size değerini düşürmeyi deneyin. Bu, `fastflow_padim.py` ve `cfa.py` dosyalarında `create_datamodule` fonksiyonu içinde ayarlanabilir.
-
-### Anomalib Sürüm Uyumsuzluğu
-
-Anomalib kütüphanesi hızlı geliştiği için, sürüm uyumsuzluğu yaşayabilirsiniz. Uyumsuzluk durumunda, kodun çalıştığı sürümü yüklemek için:
-
-```bash
-pip install anomalib==0.4.0
-```
-
-### PyTorch Lightning Hatası
-
-PyTorch Lightning'in yeni sürümlerinde bazı değişiklikler oldu. Kodumuz hem eski hem de yeni sürümlerle uyumlu olacak şekilde tasarlanmıştır. Ancak bir hata alırsanız, belirli bir sürümü yüklemek sorunları çözebilir:
-
-```bash
-pip install lightning==2.0.0
-```
 
 ## Proje Klasör Yapısı
 
@@ -157,26 +136,14 @@ ahsap-anomali-tespiti/
 ├── fastflow_padim.py         # FastFlow ve PADIM modelleri için kod
 ├── models_test_gui.py        # Masaüstü uygulaması
 │
-├── results/                  # Eğitim sonuçları
-│   ├── cfa/
-│   ├── fastflow/
-│   └── padim/
-│
 ├── requirements.txt          # Gerekli paketler
-└── README.md                 # Bu belge
+└── README.md                 
 ```
 
-## Katkıda Bulunanlar
 
-- Mustafa ÖZGÜR - 121320191002
 
-## Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
 
-## İletişim
-
-Sorularınız için: [Email Adresiniz]
 
 ---
 
