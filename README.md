@@ -25,32 +25,41 @@ Projede üç farklı model uygulanmıştır:
 - **PADIM**: Mahalanobis mesafesi tabanlı anomali tespit modeli
 - **CFA**: Karşıtsal öğrenme tabanlı anomali tespit modeli
 
-## Kurulum
+Kurulum
+Gereksinimler
 
-### Gereksinimler
+Python 3.12+
+PyTorch 1.10+
+CUDA 11.1+ (GPU kullanımı için)
+Anomalib 2.0.0
 
-- Python 3.8+
-- PyTorch 1.10+
-- CUDA 11.1+ (GPU kullanımı için)
-- Anomalib 2.0.0
+Conda İle Sanal Ortam Kurulumu
 
-### Kurulum Adımları
+Repository'yi klonlayın:
 
-1. Repository'yi klonlayın:
-```bash
-git clone https://github.com/mmustafaozgur/NeuralNetworksAnomalyDetection.git
+bashgit clone https://github.com/mmustafaozgur/NeuralNetworksAnomalyDetection.git
 cd NeuralNetworksAnomalyDetection
-```
 
-2. Gerekli paketleri yükleyin:
-```bash
-pip install -r requirements.txt
-```
+Conda kullanarak sanal ortam oluşturun:
 
-3. Anomalib kütüphanesini yükleyin:
-```bash
+bashconda create -n anomaly-env python=3.8
+conda activate anomaly-env
+
+PyTorch ve CUDA kurulumu:
+
+bash# CUDA 11.6 için
+conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
+
+# CPU kullanımı için
+# conda install pytorch torchvision torchaudio cpuonly -c pytorch
+
+Gerekli paketleri yükleyin:
+
+bashpip install -r requirements.txt
+
+Anomalib kütüphanesini yükleyin:
+
 pip install anomalib[full]
-```
 
 ## Veri Seti
 
