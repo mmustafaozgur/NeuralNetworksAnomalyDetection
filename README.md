@@ -45,7 +45,7 @@ cd NeuralNetworksAnomalyDetection
 Conda kullanarak sanal ortam oluşturun:
 
 ```bash
-conda create -n anomaly-env python=3.8
+conda create -n anomaly-env python=3.12
 conda activate anomaly-env
 ```
 
