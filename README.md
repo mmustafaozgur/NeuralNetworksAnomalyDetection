@@ -37,30 +37,38 @@ Conda İle Sanal Ortam Kurulumu
 
 Repository'yi klonlayın:
 
-bashgit clone https://github.com/mmustafaozgur/NeuralNetworksAnomalyDetection.git
+```bash
+git clone https://github.com/mmustafaozgur/NeuralNetworksAnomalyDetection.git
 cd NeuralNetworksAnomalyDetection
+```
 
 Conda kullanarak sanal ortam oluşturun:
 
-bashconda create -n anomaly-env python=3.8
+```bash
+conda create -n anomaly-env python=3.8
 conda activate anomaly-env
+```
 
 PyTorch ve CUDA kurulumu:
 
-bash# CUDA 11.6 için
+```bash
+# CUDA 11.6 için
 conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -c conda-forge
+```
 
 # CPU kullanımı için
 # conda install pytorch torchvision torchaudio cpuonly -c pytorch
 
 Gerekli paketleri yükleyin:
 
-bashpip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
 Anomalib kütüphanesini yükleyin:
-
+```bash
 pip install anomalib[full]
-
+```
 ## Veri Seti
 
 Proje, MVTec Anomaly Detection veri setinin Wood alt kümesini kullanmaktadır. Veri setini aşağıdaki yapıda organize etmeniz gerekmektedir:
